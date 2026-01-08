@@ -1,0 +1,11 @@
+USE agri_ICMR;
+
+SELECT
+    State_Name,
+    Dist_Name,
+    GROUNDNUT_PRODUCTION_1000_tons AS groundnut_production_1000_tons
+FROM agridata
+WHERE Year = 2017
+  AND GROUNDNUT_PRODUCTION_1000_tons > 0
+ORDER BY GROUNDNUT_PRODUCTION_1000_tons DESC
+LIMIT 10;
